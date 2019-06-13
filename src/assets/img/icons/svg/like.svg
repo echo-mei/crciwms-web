@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="11px" viewBox="0 0 13 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>点赞</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="点赞" transform="translate(0.000000, -1.000000)" fill-rule="nonzero">
+            <rect id="Rectangle-6" fill="#D8D8D8" opacity="0" x="0" y="0" width="14" height="14"></rect>
+            <g id="赞" transform="translate(0.000000, 1.217391)" fill="#AFAFAF">
+                <path d="M5.03517871,3.51318299 L3.00298329,3.51318299 L3.00298329,9.37780455 L10.0043746,9.37780455 L11.1197727,3.51318299 L7.87515382,3.51318299 L8.1746733,1.06331558 L6.2012767,1.06331558 L5.03517871,3.51318299 Z M4.43403065,2.64063448 L5.60012864,0.190767074 L9.13684274,0.190767074 L8.83732326,2.64063448 L12.173913,2.64063448 L10.7266133,10.2503531 L2.13043478,10.2503531 L2.13043478,2.64063448 L4.43403065,2.64063448 Z M0.077834012,2.64918956 L1.07783401,2.64918956 L1.07783401,10.2490858 L0.077834012,10.2490858 L0.077834012,2.64918956 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

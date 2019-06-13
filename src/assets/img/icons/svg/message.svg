@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="12px" viewBox="0 0 11 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>评论</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="评论" transform="translate(-2.000000, -1.000000)" fill-rule="nonzero">
+            <rect id="Rectangle-6" fill="#D8D8D8" opacity="0" x="0" y="0" width="14" height="14"></rect>
+            <path d="M3.23186543,9.25632772 L2.15217391,9.25632772 L2.15217391,1.15217391 L12.1956522,1.15217391 L12.1956522,9.25632772 L7.21763641,9.25632772 L3.23186543,12.176647 L3.23186543,9.25632772 Z M3.06521739,2.06521739 L3.06521739,8.34328424 L4.14490891,8.34328424 L4.14490891,10.3757826 L6.91894569,8.34328424 L11.2826087,8.34328424 L11.2826087,2.06521739 L3.06521739,2.06521739 Z" id="Shape" fill="#AFAFAF"></path>
+        </g>
+    </g>
+</svg>

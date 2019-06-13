@@ -1,0 +1,1034 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/** 清除内外边距 **/
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+/* structural elements 结构元素 */
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+/* list elements 列表元素 */
+pre,
+/* text formatting elements 文本格式元素 */
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+/* form elements 表单元素 */
+th,
+td
+
+/* table elements 表格元素 */
+  {
+  margin: 0;
+  padding: 0;
+}
+
+/** 设置默认字体 **/
+body,
+button,
+input,
+select,
+textarea
+
+/* for ie */
+  {
+  font: 12px/1.5 "PingFang SC", "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+
+address,
+cite,
+dfn,
+em,
+var {
+  font-style: normal;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: courier new, courier, monospace;
+}
+
+*/ small {
+  font-size: 12px;
+}
+
+/** 重置列表元素 **/
+ul,
+ol {
+  list-style: none;
+}
+
+/** 重置文本格式元素 **/
+a {
+  text-decoration: none;
+}
+
+/** 重置表单元素 **/
+legend {
+  color: #000;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  font-family: "PingFang SC", "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+}
+
+a {
+  color: black;
+}
+
+.m_l5 {
+  margin-left: 5px;
+}
+
+.m_l10 {
+  margin-left: 10px;
+}
+
+.m_l20 {
+  margin-left: 20px;
+}
+
+.m_l30 {
+  margin-left: 30px;
+}
+
+.m_l50 {
+  margin-left: 50px;
+}
+
+.m_l100 {
+  margin-left: 100px;
+}
+
+.m_t10 {
+  margin-top: 10px;
+}
+
+.m_t15 {
+  margin-top: 15px;
+}
+
+.m_t20 {
+  margin-top: 20px;
+}
+
+.m_t30 {
+  margin-top: 30px;
+}
+
+.m_t50 {
+  margin-top: 50px;
+}
+
+.m_t250 {
+  margin-top: 250px;
+}
+
+.m_r10 {
+  margin-right: 10px;
+}
+
+.font_w600 {
+  font-weight: 600;
+}
+
+.font_14 {
+  font-size: 14px;
+}
+
+.font_16 {
+  font-size: 16px;
+}
+
+.font_18 {
+  font-size: 18px;
+}
+
+.font_20 {
+  font-size: 20px;
+}
+
+.font_24 {
+  font-size: 24px;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clear_both {
+  clear: both;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+  overflow: hidden;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+ul,
+li,
+div,
+p,
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/*右侧滑出弹框样式*/
+
+.ivu-right-modal {
+  width: 70%;
+  margin: 0 auto;
+  position: fixed;
+  outline: 0;
+  top: 105px;
+  left: 100%;
+  z-index: 99;
+  box-shadow: -2px 0 10px #888888;
+}
+
+.upload-tips {
+  max-height: 100px;
+  overflow: auto;
+}
+
+.upload-tips.high {
+  max-height: 400px;
+}
+
+/*modal框*/
+
+.blue {
+  background: #39f;
+  color: #fff;
+}
+
+.blue-text {
+  color: #39f;
+}
+
+.red-text {
+  color: #ed4014;
+}
+
+.warring-icon {
+  color: #ff9900;
+}
+
+.gray_b {
+  background: #F2F9FC !important;
+}
+
+.gray_active,
+.gray_active td {
+  background: #CDEEFF !important;
+}
+
+.red {
+  color: red;
+}
+
+.gray {
+  color: #AAAAAA;
+}
+
+.blue_color {
+  color: #39f;
+}
+
+
+
+.checkedA {
+  background: #5cadff;
+  color: #FFFFFF;
+}
+
+/* .common_table_container .ivu-table-tbody tr:nth-child(even) td {
+  background: #f5f7f9;
+} */
+
+.table-b table,
+.table-c table {
+  border-right: 1px solid #E4EEF6;
+  border-bottom: 1px solid #E4EEF6;
+}
+
+.table-b table td,
+.table-c table td {
+  border-left: 1px solid #E4EEF6;
+  border-top: 1px solid #E4EEF6;
+  height: 44px;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.table-c table td {
+  width: 1000px;
+}
+
+.table-b table td:nth-child(odd) {
+  background: #F2F9FC;
+}
+
+/*------------------form样式-----------------*/
+.ivu-form .ivu-form-item-label,
+.ivu-form-item-content,
+.ivu-input,
+.ivu-select-single .ivu-select-selection .ivu-select-placeholder,
+.ivu-select-single .ivu-select-selection .ivu-select-selected-value {
+  font-size: 14px;
+}
+
+k .ivu-form-item-content {
+  word-break: break-all;
+}
+
+.ivu-form-item-error-tip {
+  font-size: 12px;
+  padding-top: 0;
+}
+
+.ivu-select .ivu-select-dropdown {
+  width: inherit;
+}
+
+/*------------------common------------------*/
+
+
+/*------------------private------------------*/
+
+.ivu-btn-ghost:hover {
+  border-color: #2db7f5;
+}
+
+/* .ivu-checkbox-checked .ivu-checkbox-inner,
+.ivu-checkbox-indeterminate .ivu-checkbox-inner {
+  border-color: #2db7f5;
+  background-color: #2db7f5;
+} */
+
+/*全局showLoading样式*/
+
+.showLoading {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 9999;
+  /* background: rgba(255, 255, 255, 0); */
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.showLoading .loading-content {
+  background: rgba(0, 0, 0, 0.4);
+  width: 160px;
+  margin: 20% auto;
+  position: relative;
+  color: #fff;
+  border-radius: 3px;
+  text-align: center;
+  padding: 6px;
+}
+
+.showLoading .loading-content .loading-icon {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  vertical-align: middle;
+  animation: spinner 1.5s steps(12, end) infinite;
+  background: transparent url(data:image/png;base64,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) no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+}
+
+.showLoading .loading-content .loading-text {
+  padding: 10px 10px 10px 5px;
+  display: inline-block;
+}
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate3d(0, 0, 1, 360deg);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate3d(0, 0, 1, 360deg);
+  }
+}
+
+/*全局showLoading样式结束*/
+
+/*底部分页按钮*/
+
+.ivu-page {
+  text-align: center;
+  min-height: 50px;
+  /*height: auto!important;
+	margin: 20px auto 0;*/
+}
+
+.ivu-modal .ivu-page {
+  position: relative !important;
+}
+
+.ivu-page .ivu-page-options {
+  display: inline-block;
+  float: none;
+}
+
+.ivu-page .ivu-page-prev>a {
+  vertical-align: bottom;
+}
+
+.ivu-page .ivu-page-prev>a>i {
+  vertical-align: middle;
+}
+
+.ivu-page .ivu-page-next>a {
+  vertical-align: bottom;
+}
+
+.ivu-page .ivu-page-next>a>i {
+  vertical-align: middle;
+}
+
+.ivu-page>li {
+  display: inline-block;
+  float: none;
+}
+
+.ivu-page .ivu-page-options-sizer {
+  float: none;
+  display: inline-block;
+}
+
+.ivu-page .ivu-page-options-elevator {
+  float: none;
+  display: inline-block;
+}
+
+/*
+ * 功能：全局模态框的样式
+ * 作者：曾文聪
+ * 描述：重新定义模态框的部分默认样式
+ * 创建日期：2018-10-10
+ */
+.ivu-modal {
+  width: 480px;
+  /* min-width: 600px; */
+}
+
+.ivu-modal-header {
+  text-align: left;
+  background: #3e71f7;
+}
+
+.ivu-modal-header .ivu-modal-header-inner {
+  color: #fff;
+}
+
+.ivu-modal-close .ivu-icon-ios-close {
+  color: #fff;
+}
+
+.ivu-modal-footer {
+  background: #f0f3f8;
+  text-align: center;
+}
+
+.ivu-modal-confirm {
+  /* width: 200px; */
+}
+
+.ivu-modal-confirm-footer {
+  text-align: center;
+}
+
+.ivu-modal-confirm-footer button+button {
+  margin-left: -120px;
+}
+
+.ivu-modal-confirm-footer .ivu-btn-text {
+  /* float: right; */
+}
+
+.vertical-center-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.vertical-center-modal .ivu-modal {
+  top: 0;
+}
+
+
+/*
+ * 功能：全局滚动条的样式
+ * 坐着：曾文聪
+ * 描述：重新定义默认的滚动条的样式，变的更加的扁平化
+ * 创建日期：2018-08-10
+ */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-button:vertical {
+  display: none;
+}
+
+::-webkit-scrollbar-corner,
+::-webkit-scrollbar-track {
+  background-color: #e2e2e2;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+::-webkit-scrollbar-thumb:vertical:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+::-webkit-scrollbar-thumb:vertical:active {
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+/*弹出框*/
+
+.ivu-modal-body .ivu-modal-footer {
+  display: block;
+}
+
+
+/*解决模态框样式错乱问题*/
+
+.v-transfer-dom {
+  position: relative;
+}
+
+/*common css*/
+
+
+/*common_start*/
+
+input::-webkit-input-placeholder {
+  /* WebKit browsers*/
+  color: #999999;
+}
+
+input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18*/
+  color: #999999;
+}
+
+input::-moz-placeholder {
+  /* Mozilla Firefox 19+*/
+  color: #999999;
+}
+
+input:-ms-input-placeholder {
+  /* Internet Explorer 10+*/
+  color: #999999;
+}
+
+/*输入框：type=“number” 去除上下箭头*/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.ivu-page {
+  padding-top: 10px;
+}
+
+
+
+/**
+ * 定义表单页面样式，有双列和合并单列展示
+
+ */
+
+.form_container {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.form_container .form_container_row {
+  padding: 5px 0px;
+  display: flex;
+  position: relative;
+}
+
+.form_container .form_container_row .form_item {
+  flex: 1;
+  position: relative;
+}
+
+.form_container .form_container_row .form_item .item_long {
+  width: 100%;
+  position: relative;
+}
+
+
+
+/**
+ * 定义公用的按钮样式
+ */
+
+.commonButton {
+  box-sizing: border-box;
+  padding: 6px 20px !important;
+  min-width: 90px;
+  margin: 0px !important;
+  margin-left: 8px !important;
+}
+
+
+.icon-btn .ivu-icon {
+  margin-right: 5px;
+}
+/**
+ * 根据UI修改主按钮色彩
+ * 2019/6/5
+ */
+.ivu-btn-primary {
+  color: #fff;
+  background-color: #1c59e6;
+  border-color: #1c59e6;
+}
+
+
+/**
+ * iconfont
+ */
+@font-face {
+  font-family: "custom-font";
+  src: url('../iconfont/icomoon.eot');
+  src: url('../iconfont/icomoon.eot') format('embedded-opentype'),
+    url('../iconfont/icomoon.ttf') format('truetype'),
+    url('../iconfont/icomoon.woff') format('woff'),
+    url('../iconfont/icomoon.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.i-icon {
+  display: inline-block;
+  font-family: 'custom-font' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: middle;
+}
+
+.icon-i-eye:before {
+  content: "\e900";
+}
+
+.icon-i-eye-of:before {
+  content: "\e901";
+}
+
+.icon-i-like:before {
+  content: "\e902";
+  /* color: #afafaf; */
+}
+
+.icon-i-loadding:before {
+  content: "\e903";
+  color: #4d74eb;
+}
+
+.icon-i-monitor:before {
+  content: "\e905";
+  color: #3e71f7;
+}
+
+.icon-i-eye:before {
+  content: "\e900";
+}
+
+.icon-i-eye-of:before {
+  content: "\e901";
+}
+
+.icon-i-like:before {
+  content: "\e902";
+}
+
+.icon-i-loadding:before {
+  content: "\e903";
+}
+
+.icon-i-message:before {
+  content: "\e904";
+}
+
+.icon-i-monitor:before {
+  content: "\e905";
+}
+
+.icon-i-refresh:before {
+  content: "\e906";
+}
+
+.icon-i-search:before {
+  content: "\e907";
+}
+
+.icon-i-time:before {
+  content: "\e908";
+}
+
+.icon-icon:before {
+  content: "\e603";
+}
+
+.icon-xiugaishuxing:before {
+  content: "\e602";
+}
+
+.icon-photo:before {
+  content: "\e630";
+}
+
+.icon-power14:before {
+  content: "\e698";
+}
+
+.icon-arrow-bottom3:before {
+  content: "\e728";
+}
+
+.icon-arrow-top3:before {
+  content: "\e729";
+}
+
+.icon-arrow-left3:before {
+  content: "\e72a";
+}
+
+.icon-arrow-right3:before {
+  content: "\e72b";
+}
+
+.icon-refresh3:before {
+  content: "\e621";
+}
+
+.icon-search4:before {
+  content: "\e633";
+}
+
+.icon-add:before {
+  content: "\e6001";
+}
+
+.icon-8:before {
+  content: "\e634";
+}
+
+.icon-bangzhu:before {
+  content: "\e683";
+}
+
+.icon-lingdaobanzi:before {
+  content: "\e6b0";
+}
+
+.icon-calendar2:before {
+  content: "\e65c";
+}
+
+.icon-correct:before {
+  content: "\e607";
+}
+
+.icon-cuo:before {
+  content: "\e7cc";
+}
+
+.icon-edit1:before {
+  content: "\e6022";
+}
+
+.icon-yinxing:before {
+  content: "\e631";
+}
+
+.icon-bukejian1:before {
+  content: "\e831";
+}
+
+.icon-add-person:before {
+  content: "\e6002";
+}
+
+.icon-fanhuishangji:before {
+  content: "\e65e";
+}
+
+.icon-anquan:before {
+  content: "\e6ca";
+}
+
+.icon-yonghurenxiang:before {
+  content: "\e61f";
+}
+
+.icon-jia:before {
+  content: "\e616";
+}
+
+.icon-gongyingshangjieshou:before {
+  content: "\e662";
+}
+
+.icon-daochu1:before {
+  content: "\e612";
+}
+
+.icon-kejian:before {
+  content: "\e65d";
+}
+
+.icon-tixing:before {
+  content: "\e609";
+}
+
+.icon-xiugaimima:before {
+  content: "\e600";
+}
+
+.icon-sanx-up:before {
+  content: "\e60b";
+}
+
+.icon-menu-unfold:before {
+  content: "\e611";
+}
+
+.icon-menu-fold:before {
+  content: "\e613";
+}
+
+.icon-download-cloud:before {
+  content: "\e615";
+}
+
+.icon-upload-cloud:before {
+  content: "\e618";
+}
+
+.icon-shangchuan1:before {
+  content: "\e60c";
+}
+
+.icon-upload:before {
+  content: "\e643";
+}
+
+.icon-xinghao:before {
+  content: "\e604";
+}
+
+.icon-xitongshezhi:before {
+  content: "\e6eb";
+}
+
+.icon-yonghu:before {
+  content: "\e622";
+}
+
+.icon-shijianlishijilujishizhongbiaoxianxing:before {
+  content: "\e895";
+}
+
+.icon-jiankong:before {
+  content: "\e620";
+}
+
+.icon-tuodong:before {
+  content: "\e7d1";
+}
+
+.icon-daoru:before {
+  content: "\e608";
+}
+
+.icon-lingdaobanzi1:before {
+  content: "\e61b";
+}
+
+.icon-jian:before {
+  content: "\e627";
+}
+
+.icon-paixu:before {
+  content: "\e60a";
+}
+
+.icon-shanchuhover:before {
+  content: "\e606";
+}
+
+.icon-arrLeft-fill:before {
+  content: "\e601";
+}
+
+.icon-warning-01:before {
+  content: "\e73b";
+}
+
+.icon-bukebianji:before {
+  content: "\e6ee";
+}
+
+.icon-jinzhicaozuo:before {
+  content: "\e623";
+}
+
+.icon-bunengshanchu:before {
+  content: "\e605";
+}
+
+.icon-chexiao:before {
+  content: "\e66a";
+}
+
+.icon-gongzi:before {
+  content: "\e6da";
+}
+
+.icon-zhengjian:before {
+  content: "\e6d5";
+}
+
+.icon-hetong:before {
+  content: "\e60d";
+}
+
+.icon-tousu:before {
+  content: "\e617";
+}
+
+.icon-workers:before {
+  content: "\e60f";
+}
+
+.icon-worker:before {
+  content: "\e686";
+}
+
+.icon-xiangmu:before {
+  content: "\e624";
+}
+
+.icon-user:before {
+  content: "\e628";
+}
+
+.icon-users:before {
+  content: "\e60e";
+}
+
+.icon-password:before {
+  content: "\e7de";
+}
+.icon-chuli:before {
+  content: "\e62a";
+}
+

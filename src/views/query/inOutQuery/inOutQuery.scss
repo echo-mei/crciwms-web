@@ -1,0 +1,78 @@
+.ivu-form .ivu-form-item-label,
+.ivu-form-item-content,
+.ivu-form .ivu-select-input,
+.ivu-input,
+.ivu-select-single .ivu-select-selection .ivu-select-placeholder,
+.ivu-select-single .ivu-select-selection .ivu-select-selected-value {
+  font-size: 14px;
+}
+.inOutQuery {
+  // .ivu-select-dropdown{
+  //     max-width:100%!important;
+
+  // }
+  // transition:  all 0.6s;
+  margin-top: 10px;
+
+  .search-box {
+    text-align: left;
+    background: #fff;
+    box-shadow: 0px 0px 10px #ddd;
+    padding-top: 10px;
+    margin: 0 16px;
+
+    .ivu-form-item {
+      width: calc(32% - 10px);
+      margin-bottom: 10px;
+
+      .ivu-select,
+      .ivu-date-picker {
+        width: 100% !important;
+      }
+    }
+  }
+
+  .tree-box {
+    float: left;
+    height: calc(100vh - 130px);
+    width: 18%;
+  }
+
+  .content-box {
+    width: 100%;
+
+    .setting {
+      padding: 10px 16px;
+      height: 46px;
+
+      .left,
+      .right {
+        cursor: pointer;
+      }
+
+      .middle-btn {
+        margin: 0 10px;
+      }
+
+    }
+
+    .page_operate {
+      padding: 10px 20px;
+      text-align: left;
+    }
+
+    .box {
+      background: #fff;
+      box-shadow: 0px 0px 10px #ddd;
+      margin: 0 16px;
+    }
+  }
+
+  .content-style2 {
+    padding-left: 80px;
+  }
+
+  .style2 {
+    width: 80px;
+  }
+}

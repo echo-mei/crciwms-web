@@ -1,0 +1,39 @@
+.personView {
+    width: 100%;
+    height: calc(100vh - 70px);
+
+    .return{
+        width: 100px;
+        font-size: 14px;
+        box-shadow: 0px 0px 10px #ddd;
+        margin-top: 10px;
+    }
+    .setting {
+        padding: 0 10px;
+  
+        .left,
+        .right {
+          cursor: pointer;
+        }
+  
+        .middle-btn{
+          margin: 0 10px;
+        }
+  
+      }
+    .ivu-layout{
+        height: calc(100% - 30px);
+        background: transparent;
+    }
+    .ivu-layout-content,.ivu-layout-sider {
+        text-align: left;
+        background: #fff;
+        box-shadow: 0px 0px 10px #ddd;
+        margin: 10px;
+        box-sizing: border-box;
+        height: calc(100% - 20px);
+        overflow: auto;
+    }
+    .ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu):after{left: 0;}
+    
+}

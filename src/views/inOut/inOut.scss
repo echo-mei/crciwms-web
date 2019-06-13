@@ -1,0 +1,111 @@
+.ivu-form .ivu-form-item-label,
+.ivu-form-item-content,
+.ivu-form .ivu-select-input,
+.ivu-input,
+.ivu-select-single .ivu-select-selection .ivu-select-placeholder,
+.ivu-select-single .ivu-select-selection .ivu-select-selected-value {
+  font-size: 14px;
+}
+
+.inOut {
+  padding: 0 16px;
+  .split-line{
+    height:calc(100vh - 130px)
+  }
+  .search-box {
+    text-align: left;
+    background: #fff;
+    box-shadow: 0px 0px 10px #ddd;
+    padding-top: 10px;
+    margin-left: 20px;
+
+    .ivu-form-item {
+      width: calc(33% - 10px);
+      margin-bottom: 10px;
+
+      .ivu-select,
+      .ivu-date-picker {
+        width: 100% !important;
+      }
+    }
+  }
+
+  .tree-box {
+     float: left;
+     height: calc(100vh - 130px);
+    // width: 18% !important;
+  }
+
+  .content-box {
+    width: 100%;
+    // padding-left: 18%;
+
+    .setting {
+      padding: 10px 20px;
+      height: 46px;
+
+      .left,
+      .right {
+        cursor: pointer;
+      }
+
+      .middle-btn {
+        margin: 0 10px;
+      }
+
+    }
+
+    .page_operate {
+      padding: 10px 20px;
+      text-align: left;
+    }
+
+    .box {
+      background: #fff;
+      box-shadow: 0px 0px 10px #ddd;
+      margin-left: 20px;
+    }
+  }
+
+  .content-style2 {
+    //padding-left: 80px;
+  }
+
+  .style2 {
+    width: 80px;
+  }
+}
+
+.inoutModal {
+  p{
+    line-height: 34px;
+  }
+  .outReason p {
+    text-align: right;
+    font-size: 12px;
+    position: absolute;
+    width: 100%;
+    line-height: 12px
+  }
+  .personlist{
+    label{
+      width:114px!important;
+    }
+    .ivu-form-item-content{
+      margin-left:114px!important;
+    }
+  }
+  .persons {
+    width: 300px;
+
+    input {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+  }
+  .outReason textarea{
+    resize: none;
+  }
+}

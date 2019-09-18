@@ -95,7 +95,6 @@
               </Button>
               <Button size="small" class="icon-btn" @click="uploadExcel">
                 <Icon custom="i-icon  icon-upload-cloud" size="18"/>
-
                 <span>批量导入</span>
               </Button>
               <Button size="small" class="icon-btn" @click="downloadExcel">
@@ -226,7 +225,6 @@ const personAdd = () => import("@/views/person/personAdd/personAdd.vue");
 const personTransfer = () =>
   import("@/views/person/personAdd/personTransfer.vue");
 import eventBus from "@/views/person/eventbus.js";
-
 import utils from "@/assets/js/utils.js";
 import requestApi from "@/assets/js/requestApi.js";
 import {
@@ -239,6 +237,7 @@ import {
   accountNoCheck
 } from "@/api/person";
 import { listCompany } from "@/api/company";
+import { mapMutations } from 'vuex'
 
 export default {
   name: "personList",
@@ -276,6 +275,7 @@ export default {
                 // this.$router.push({
                 //   path: `/person/${row.personOid}`
                 // });
+                this.setPersonSearchData(null);
                 this.$router.push({
                   name: "personView",
                   params: { id: row.personOid, searchData: this.sendData }
@@ -419,6 +419,10 @@ export default {
     }
   },
   methods: {
+     ...mapMutations([
+      // `mapMutations` 也支持载荷：
+      'setPersonSearchData' // 将 `this.incrementBy(amount)` 映射为 `this.$store.commit('incrementBy', amount)`
+    ]),
     getUnitList(unitOid) {
       return new Promise((resolve, reject) => {
         getUnitList(unitOid).then(res => {

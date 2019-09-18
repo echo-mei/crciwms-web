@@ -58,6 +58,7 @@ import eventBus from "@/views/person/eventbus.js";
 import utils from "@/assets/js/utils.js";
 import requestApi from "@/assets/js/requestApi.js";
 import {} from "jquery";
+import { mapGetters } from "vuex";
 export default {
   data() {
     return {
@@ -100,16 +101,21 @@ export default {
     // 获取路由传过来的参数
     this.personOid = this.$route.params.id;
     this.parentSearchData = this.$route.params.searchData;
-    if (JSON.stringify(this.$route.query) != "{}") {
-      const menuList = JSON.parse(this.$route.query["showMenuList"]);
-      if (menuList) this.showMenuList = menuList;
-    }
+    // if (JSON.stringify(this.$route.query) != "{}") {
+    //   const menuList = JSON.parse(this.$route.query["showMenuList"]);
+    //   if (menuList) this.showMenuList = menuList;
+    // }
+    if(this.getPersonSearchData)this.showMenuList = this.getPersonSearchData;
     this.selectMenu = this.showMenuList[0];
     this.leftCont = this.selectMenu.id; // 左边内容展示： 默认显示人员基本信息
     this.sendData = {
       personOid: this.personOid,
       canEdit: this.selectMenu.canEdit
     };
+  },
+  computed: {
+    // 使用对象展开运算符将 getter 混入 computed 对象中
+    ...mapGetters(["getPersonSearchData"])
   },
   beforeDestroy() {
     //传递一个map，searchData是key，parentSearchData是value

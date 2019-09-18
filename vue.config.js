@@ -58,7 +58,6 @@ module.exports = {
         // target: "http://192.168.0.102:8002", //凌宏永本地
         target: 'http://192.168.0.112:8002', //冷浩浩本地
         // target: 'http://192.168.1.180:8081 ', //服务器
-
         changeOrigin: true,
         pathRewrite: {
           "^/": "/" //服务器

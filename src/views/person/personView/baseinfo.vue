@@ -378,7 +378,7 @@ export default {
       }
     };
     const validatePhone = (rule, value, callback) => {
-      let reg = /(^1[2|3|4|5|7|8|9]\d{9}$)/;
+      let reg =  /(^1\d{10}$)/;
       if (!value) {
         callback(new Error("手机号不能为空！"));
       } else if (!reg.test(value)) {

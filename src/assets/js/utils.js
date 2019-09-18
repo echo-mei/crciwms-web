@@ -6,7 +6,7 @@ export default {
   getLItem(key) {
     try {
       return JSON.parse(localStorage.getItem(key));
-    } catch (e) {}
+    } catch (e) { }
   },
   removeLItem(key) {
     localStorage.removeItem(key);
@@ -17,7 +17,7 @@ export default {
   getItem(key) {
     try {
       return JSON.parse(sessionStorage.getItem(key));
-    } catch (e) {}
+    } catch (e) { }
   },
   removeItem(key) {
     sessionStorage.removeItem(key);
@@ -116,8 +116,8 @@ export default {
     if (/(Intel|PPC) Mac OS X/.test(ua)) {
       source.Mac =
         /(Intel|PPC) Mac OS X ?([0-9\._]*)[\)\;]/
-        .exec(ua)[2]
-        .replace(/_/g, ".") || true;
+          .exec(ua)[2]
+          .replace(/_/g, ".") || true;
     }
 
     if (/Windows NT/.test(ua))
@@ -167,7 +167,7 @@ export default {
       document.body.appendChild(downLoadElement);
       downLoadElement.click();
       document.body.removeChild(downLoadElement);
-    } catch (e) {}
+    } catch (e) { }
   },
   downloadPic(url) {
     if (this.myBrowser() == "Chrome") {
@@ -406,6 +406,30 @@ export default {
       return "Safari";
     } //判断是否Safari浏览
   },
+  getExplorer() {
+    var explorer = window.navigator.userAgent,
+      compare = function(s) {
+        return (explorer.indexOf(s) >= 0);
+      },
+      ie11 = (function() {
+        return ("ActiveXObject" in window);
+      })();
+    if (compare("MSIE") || ie11) {
+      return 'ie'; 
+    } else if (compare("Firefox") && !ie11) {
+      return 'Firefox'; 
+    } else if (compare("Chrome") && !ie11) {
+      if (explorer.indexOf("Edge") > -1) {
+        return 'Edge';
+      } else {
+        return 'Chrome';
+      }
+    } else if (compare("Opera") && !ie11) {
+      return 'Opera';
+    } else if (compare("Safari") && !ie11) {
+      return 'Safari';
+    }
+  },
   formatDate(date, fmt) {
     if (!date || new Date(date) == "Invalid Date") {
       return "";
@@ -432,8 +456,8 @@ export default {
           fmt = fmt.replace(
             RegExp.$1,
             RegExp.$1.length == 1 ?
-            o[k] :
-            ("00" + o[k]).substr(("" + o[k]).length)
+              o[k] :
+              ("00" + o[k]).substr(("" + o[k]).length)
           );
         }
       }
@@ -666,8 +690,8 @@ export default {
         formatStr = formatStr.replace(
           RegExp.$1,
           RegExp.$1.length == 1 ?
-          o[k] :
-          ("00" + o[k]).substr(("" + o[k]).length)
+            o[k] :
+            ("00" + o[k]).substr(("" + o[k]).length)
         );
     }
     return formatStr;
@@ -700,12 +724,12 @@ export default {
       let year = startDate.getFullYear();
       let month =
         startDate.getMonth().toString().length == 1 ?
-        "0" + (startDate.getMonth() + 1).toString() :
-        startDate.getMonth() + 1;
+          "0" + (startDate.getMonth() + 1).toString() :
+          startDate.getMonth() + 1;
       let day =
         startDate.getDate().toString().length == 1 ?
-        "0" + startDate.getDate() :
-        startDate.getDate();
+          "0" + startDate.getDate() :
+          startDate.getDate();
       diffDates.push(year + "-" + month + "-" + day);
       startDate.setDate(startDate.getDate() + 1);
     }

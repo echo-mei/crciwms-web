@@ -20,7 +20,7 @@
           :columns="columns"
           :data="tableData"
           ref="selection"
-          @on-select="onSelectRows"
+          @on-selection-change="onSelectRows"
           @on-select-all="onSelectAll"
           highlight-row
         >

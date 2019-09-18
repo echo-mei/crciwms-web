@@ -1,5 +1,4 @@
 <style lang="scss">
-
 </style>
 <template>
   <div v-if="showModal">
@@ -15,6 +14,15 @@
           <Form ref="queryForm" key="searchForm" :model="queryData" :label-width="45" inline>
             <FormItem label="姓名" prop="name" style="width:40%;">
               <Input clearable placeholder="请输入姓名" v-model="queryData.name"/>
+            </FormItem>
+            <FormItem label="身份证号" prop="idNo">
+              <Input
+                clearable
+                type="text"
+                v-model="queryData.idNo"
+                placeholder="请输入身份证号"
+                :maxlength="18"
+              ></Input>
             </FormItem>
             <div style="display:inline-block;margin-left:10px;">
               <Button type="primary" @click="search()">查询</Button>

@@ -11,18 +11,21 @@
     cursor: pointer;
   }
   .row-wrap {
-    width: calc(100% + 20px);
+    display: flex;
+    width: 100%;
     height: 37%;
     min-height: 230px;
-    margin-left: -10px;
+    overflow: hidden;
     .home-col {
-      flex: 0 0 36%;
+      float: left;
       width: 36%;
       height: 100%;
-      padding: 0 10px;
+      padding-left: 20px;
+      box-sizing: border-box;
       &:first-of-type {
         width: 28%;
         flex: 0 0 28%;
+        padding-left:0; 
       }
 
       .col-content {
@@ -141,7 +144,7 @@
 </style>
 <template>
   <div class="home">
-    <Row type="flex" justify="space-between" class="row-wrap">
+    <div class="row-wrap">
       <div class="home-col">
         <div class="col-content col-content-total">
           <div class="col-header">
@@ -195,9 +198,9 @@
           </div>
         </div>
       </div>
-    </Row>
+    </div>
 
-    <Row class="row-wrap2">
+    <div class="row-wrap2">
       <div class="col-header">{{unitName}}进场退场人员统计</div>
       <div class="col-main">
         <chart-bar
@@ -209,7 +212,7 @@
           ref="bar"
         />
       </div>
-    </Row>
+    </div>
   </div>
 </template>
 
@@ -297,17 +300,7 @@ export default {
       ],
       ageColor: ["#f8e367", "#e18197", "#8abe6e", "#6e7fbe", "#39c8c8"],
       avgAge: 20,
-      imagePieData: [
-        // 证照不全
-        { value: 335, name: "证照齐全" },
-        { value: 310, name: "证照不全" }
-      ],
-      contractPieData: [
-        // 在场、不在场
-        { value: 335, name: "合同齐全" },
-        { value: 310, name: "合同不全" }
-      ],
-      contractColor: ["#66ccff", "#ff9933"],
+
       barData: {
         value: [],
         name: {
@@ -338,10 +331,6 @@ export default {
       // inforCardData[3]  申诉受理
       // isHerePieData[0]  在场
       // isHerePieData[1]  不在场
-      // imagePieData[0]  证照齐全
-      // imagePieData[1]  证照不全
-      // contractPieData[0]  合同齐全
-      // contractPieData[1]  合同不全
       getNotImageCount().then(res => {
         if (res) this.inforCardData[0].count = res.result;
       });
@@ -361,8 +350,8 @@ export default {
           //获取进场总数
           this.onCount = res.result.onCount;
           // 进场离场数据获取
-          this.isHerePieData[0].value = res.result.onCount || "";
-          this.isHerePieData[1].value = res.result.outCount || "";
+          this.isHerePieData[0].value = res.result.onCount || 0;
+          this.isHerePieData[1].value = res.result.outCount || 0;
           // 进场人员年龄统计
           this.avgAge = res.result.avgAge;
           this.agePieData[0].value = res.result.age1;
@@ -370,13 +359,6 @@ export default {
           this.agePieData[2].value = res.result.age3;
           this.agePieData[3].value = res.result.age4;
           this.agePieData[4].value = res.result.age5;
-
-          this.imagePieData[0].value =
-            res.result.sumCount - res.result.notImageCount || "";
-          this.imagePieData[1].value = res.result.notImageCount || "";
-          this.contractPieData[0].value =
-            res.result.sumCount - res.result.notContractCount || "";
-          this.contractPieData[1].value = res.result.notContractCount || "";
           if (
             res.result.personStatisticsDTOs &&
             res.result.personStatisticsDTOs.length !== 0
@@ -400,7 +382,6 @@ export default {
           this.$nextTick(() => {
             this.$refs.isHere.initData();
             this.$refs.age.initData();
-            // this.$refs.contract.initData();
             this.$refs.bar.initData();
           });
         }

@@ -125,6 +125,7 @@ import { listCompany } from "@/api/company.js";
 import { getOrgTreeList } from "@/api/org.js";
 import { getDicItemList, exportPersons } from "@/api/person";
 import { saveAs } from "file-saver";
+import { mapMutations } from "vuex";
 
 import {} from "jquery";
 export default {
@@ -158,20 +159,32 @@ export default {
                 return true;
               },
               initEvent: (row, index) => {
-                this.$router.push({
-                  path: `/person/${row.personOid}`,
-                  query: {
-                    showMenuList: JSON.stringify([
-                      {
-                        id: 1,
-                        type: "baseinfo",
-                        name: "基本信息",
-                        icon: "md-document",
-                        canEdit: false
-                      }
-                    ])
+                this.setPersonSearchData([
+                  {
+                    id: 1,
+                    type: "baseinfo",
+                    name: "基本信息",
+                    icon: "md-document",
+                    canEdit: false
                   }
+                ]);
+                this.$router.push({
+                  path: `/person/${row.personOid}`
                 });
+                // this.$router.push({
+                //   path: `/person/${row.personOid}`,
+                //   query: {
+                //     showMenuList: JSON.stringify([
+                //       {
+                //         id: 1,
+                //         type: "baseinfo",
+                //         name: "基本信息",
+                //         icon: "md-document",
+                //         canEdit: false
+                //       }
+                //     ])
+                //   }
+                // });
               }
             }
           ],
@@ -306,8 +319,11 @@ export default {
       this.propMaxHeight = window.innerHeight - 420;
     };
   },
-
   methods: {
+    ...mapMutations([
+      // `mapMutations` 也支持载荷：
+      "setPersonSearchData" // 将 `this.incrementBy(amount)` 映射为 `this.$store.commit('incrementBy', amount)`
+    ]),
     initCompanyList() {
       listCompany().then(res => {
         this.companyList = res.result.list;
@@ -354,23 +370,22 @@ export default {
     },
     //查询
     handleSubmit(name) {
-
       let reg = /^\d+$/;
 
       if (
-        (this.sendData.minAge  && !reg.test(this.sendData.minAge)) ||
+        (this.sendData.minAge && !reg.test(this.sendData.minAge)) ||
         (this.sendData.maxAge && !reg.test(this.sendData.maxAge))
       ) {
         this.$Message.error({
           content: "年龄范围仅能输入数字",
           duration: 2
         });
-      } else if(this.sendData.minAge > this.sendData.maxAge){
-         this.$Message.error({
+      } else if (this.sendData.minAge > this.sendData.maxAge) {
+        this.$Message.error({
           content: "年龄范围输入错误，最小年龄不能大于最大年龄",
           duration: 2
         });
-      }else {
+      } else {
         this.$refs.table.queryData(this.sendData);
       }
     },

@@ -243,7 +243,9 @@
       </div>
     </Modal>
     <Modal v-model="pdfModel" title="pdf文件预览" width="800" :mask-closable="false">
-      <iframe ref="iframe" :height="pdfHeight" width="100%"></iframe>
+      <div v-if="this.pdfModel">
+        <iframe ref="iframe" :height="pdfHeight" width="100%"></iframe>
+      </div>
       <div slot="footer">
         <Button type="primary" style="width:90px" @click="pdfCancel">关闭</Button>
       </div>
@@ -448,7 +450,9 @@ export default {
           );
           const pdfUrl = `/pdfjs/web/viewer.html?file=${url}`;
           this.pdfModel = true;
-          this.set(pdfUrl);
+          this.$nextTick(() => {
+            this.set(pdfUrl);
+          });
         }
       });
     },

@@ -87,6 +87,7 @@ import requestApi from "@/assets/js/requestApi.js";
 import { getContractPdf } from "@/api/contract";
 import {} from "jquery";
 import { saveAs } from "file-saver";
+import { mapMutations } from "vuex";
 
 export default {
   data() {
@@ -115,20 +116,32 @@ export default {
                 return true;
               },
               initEvent: (row, index) => {
-                this.$router.push({
-                  path: `/person/${row.relationOid}`,
-                  query: {
-                    showMenuList: JSON.stringify([
-                      {
-                        id: 2,
-                        type: "contractinfo",
-                        name: "合同信息",
-                        icon: "md-folder",
-                        canEdit: false
-                      }
-                    ])
+                this.setPersonSearchData([
+                  {
+                    id: 2,
+                    type: "contractinfo",
+                    name: "合同信息",
+                    icon: "md-folder",
+                    canEdit: false
                   }
+                ]);
+                this.$router.push({
+                  path: `/person/${row.relationOid}`
                 });
+                // this.$router.push({
+                //   path: `/person/${row.relationOid}`,
+                //   query: {
+                //     showMenuList: JSON.stringify([
+                //       {
+                //         id: 2,
+                //         type: "contractinfo",
+                //         name: "合同信息",
+                //         icon: "md-folder",
+                //         canEdit: false
+                //       }
+                //     ])
+                //   }
+                // });
               }
             },
             {
@@ -230,6 +243,10 @@ export default {
   },
 
   methods: {
+    ...mapMutations([
+      // `mapMutations` 也支持载荷：
+      "setPersonSearchData" // 将 `this.incrementBy(amount)` 映射为 `this.$store.commit('incrementBy', amount)`
+    ]),
     onStartTimeChange(startTime) {
       this.sendData.beginDate = startTime;
       this.endTimeOption = {
@@ -278,8 +295,14 @@ export default {
     },
     //查询
     handleSubmit() {
-      this.sendData.beginDate = utils.formatDate(this.sendData.beginDate, "yyyy-MM-dd");
-      this.sendData.endDate = utils.formatDate(this.sendData.endDate, "yyyy-MM-dd");
+      this.sendData.beginDate = utils.formatDate(
+        this.sendData.beginDate,
+        "yyyy-MM-dd"
+      );
+      this.sendData.endDate = utils.formatDate(
+        this.sendData.endDate,
+        "yyyy-MM-dd"
+      );
       this.$refs.table.queryData();
     },
     //重置

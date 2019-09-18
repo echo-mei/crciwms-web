@@ -103,7 +103,7 @@
       class="inoutModal"
       :mask-closable="maskClosable"
     >
-      <Form :label-width="100" ref="inOut" :model="inOutData" :rules="inOutRules">
+      <Form :label-width="100" ref="inOut" :model="inOutData" :rules="inOutRules" v-if="this.isShowModal" >
         <FormItem label="已选人员：" class="personlist">
           <p>
             {{inOutPersons}}
@@ -150,7 +150,7 @@
       class="inoutModal"
       :mask-closable="maskClosable"
     >
-      <Form :label-width="100" ref="Out" :model="outData" :rules="outRules">
+      <Form :label-width="100" ref="Out" :model="outData" :rules="outRules" v-if="this.outModal">
         <FormItem label="已选人员：" class="personlist">
           <p>
             {{inOutPersons}}
@@ -372,10 +372,7 @@ export default {
     },
     onChangeStyle(style) {
       this.treeStyle = style;
-      this.split = style === "style2" ? 0.06 : 0.2; // 分割线
-      this.$nextTick(() => {
-        this.$refs.table.resetWidth();
-      });
+      this.split = style === "style2" ? 80 / window.innerWidth : 0.2;// 分割线
     },
     onNodeClick(data) {
       this.$refs.queryForm.resetFields();

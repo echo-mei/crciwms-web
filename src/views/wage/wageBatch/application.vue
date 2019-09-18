@@ -144,13 +144,11 @@ export default {
       this.sendData.type = "check";
     },
     goBack() {
+      this.sendData.batchOid = this.sentData.batchOid;
       if (this.sendData.type === "check") {
         this.type = "";
-
       } else if (this.sendData.type === "add") {
         this.type = "addOrRemove";
-
-
       }
     },
     onWaitSuccess() {

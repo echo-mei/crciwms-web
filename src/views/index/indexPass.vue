@@ -7,6 +7,7 @@
     @on-cancel="passHandleCancel"
     :mask-closable="maskClosable"
   >
+  <div v-if="this.passModal">
     <div class="eg">
       <span>温馨提示：</span>
       <p>
@@ -53,6 +54,7 @@
         />
       </FormItem>
     </Form>
+  </div>
     <div slot="footer">
       <Button type="primary" style="width:90px" @click="passHandleOk">保存</Button>
       <Button type="dashed" style="width:90px" @click="passHandleCancel">取消</Button>

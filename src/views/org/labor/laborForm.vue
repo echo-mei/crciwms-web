@@ -51,7 +51,7 @@
             <Input placeholder="请输入邮箱" v-model="addformValidate.email" clearable/>
           </FormItem>
           <FormItem label="手机号" prop="phone">
-            <Input placeholder="请输入手机号" v-model="addformValidate.phone" clearable :maxlength="11" />
+            <Input placeholder="请输入手机号" v-model="addformValidate.phone" clearable :maxlength="11"/>
           </FormItem>
           <FormItem label="固定电话" prop="mobilePhone">
             <Input placeholder="请输入固定电话" v-model="addformValidate.mobilePhone" clearable/>
@@ -117,7 +117,7 @@
             <Input placeholder="请输入邮箱" v-model="modformValidate.email" clearable/>
           </FormItem>
           <FormItem label="手机号" prop="phone">
-            <Input placeholder="请输入手机号" v-model="modformValidate.phone" clearable :maxlength="11" />
+            <Input placeholder="请输入手机号" v-model="modformValidate.phone" clearable :maxlength="11"/>
           </FormItem>
           <FormItem label="固定电话" prop="mobilePhone">
             <Input placeholder="请输入固定电话" v-model="modformValidate.mobilePhone" clearable/>
@@ -141,7 +141,7 @@
       :mask-closable="maskClosable"
       class="viewLabor"
     >
-      <div class="laborForm" :style="{height:cpropMaxHeight+'px'}" v-if="this.viewModal" >
+      <div class="laborForm" :style="{height:cpropMaxHeight+'px'}" v-if="this.viewModal">
         <Form :label-width="150">
           <FormItem label="劳务公司名称：" class="allWid">
             <p>{{viewformValidate.companyName}}</p>
@@ -227,7 +227,7 @@ export default {
 
     //手机号校验
     const validatePhone = (rule, value, callback) => {
-      var phone = /(^1[2|3|4|5|7|8|9]\d{9}$)/;
+      var phone = /(^1\d{10}$)/;
       if (phone.test(value) || $.trim(value) === "") {
         callback();
       } else {

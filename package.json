@@ -18,7 +18,7 @@
     "file-saver": "^2.0.2",
     "fingerprintjs2": "^2.0.6",
     "iview": "^3.0.1",
-    "jquery": "^3.4.0",
+    "jquery": "^3.5.0",
     "jsencrypt": "^3.0.0-rc.1",
     "lrz": "^4.9.40",
     "mockjs": "^1.0.1-beta3",
